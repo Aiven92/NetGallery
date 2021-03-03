@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,8 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				22DBA6CA25F6961A002D21B3 /* AppDelegate.swift */,
-				22DBA6CE25F6961A002D21B3 /* BioViewController.swift */,
 				22DBA6D325F6961B002D21B3 /* Assets.xcassets */,
+				22DBA6CE25F6961A002D21B3 /* BioViewController.swift */,
 				22DBA6D825F6961B002D21B3 /* Info.plist */,
 			);
 			path = NetGallery;
@@ -71,7 +71,6 @@
 				5FF669E8A711D33E1518DDFB /* Pods-NetGallery.debug.xcconfig */,
 				989140FF77DD57891871BCCB /* Pods-NetGallery.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
