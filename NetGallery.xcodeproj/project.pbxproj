@@ -12,6 +12,7 @@
 		22DBA6CF25F6961A002D21B3 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBA6CE25F6961A002D21B3 /* BioViewController.swift */; };
 		22DBA6D425F6961B002D21B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DBA6D325F6961B002D21B3 /* Assets.xcassets */; };
 		22DBA6F025F6A989002D21B3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBA6EF25F6A989002D21B3 /* TabBarViewController.swift */; };
+		22DBA6F325F6AC02002D21B3 /* NetworkImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBA6F225F6AC02002D21B3 /* NetworkImageCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		22DBA6D325F6961B002D21B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22DBA6D825F6961B002D21B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22DBA6EF25F6A989002D21B3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		22DBA6F225F6AC02002D21B3 /* NetworkImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageCollectionViewController.swift; sourceTree = "<group>"; };
 		5FF669E8A711D33E1518DDFB /* Pods-NetGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGallery.debug.xcconfig"; path = "Target Support Files/Pods-NetGallery/Pods-NetGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		621637196C95B7CC477F6D23 /* Pods_NetGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		989140FF77DD57891871BCCB /* Pods-NetGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGallery.release.xcconfig"; path = "Target Support Files/Pods-NetGallery/Pods-NetGallery.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				22DBA6CA25F6961A002D21B3 /* AppDelegate.swift */,
 				22DBA6EF25F6A989002D21B3 /* TabBarViewController.swift */,
 				22DBA6D325F6961B002D21B3 /* Assets.xcassets */,
+				22DBA6F225F6AC02002D21B3 /* NetworkImageCollectionViewController.swift */,
 				22DBA6CE25F6961A002D21B3 /* BioViewController.swift */,
 				22DBA6D825F6961B002D21B3 /* Info.plist */,
 			);
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22DBA6CF25F6961A002D21B3 /* BioViewController.swift in Sources */,
+				22DBA6F325F6AC02002D21B3 /* NetworkImageCollectionViewController.swift in Sources */,
 				22DBA6F025F6A989002D21B3 /* TabBarViewController.swift in Sources */,
 				22DBA6CB25F6961A002D21B3 /* AppDelegate.swift in Sources */,
 			);
