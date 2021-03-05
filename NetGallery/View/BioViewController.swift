@@ -9,8 +9,10 @@ import UIKit
 import PureLayout
 
 class BioViewController: UIViewController {
+    private var viewModel = BioViewModel()
+    
     lazy var avatar: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "img"))
+        let imageView = UIImageView(image: UIImage(named: viewModel.imageName))
         imageView.autoSetDimensions(to: CGSize(width: 375/2, height: 500/2))
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
@@ -19,27 +21,13 @@ class BioViewController: UIViewController {
     
     lazy var nameLable: UILabel = {
         let nameLable = UILabel()
-        nameLable.text = "Vasiliy Samarin"
+        nameLable.text = viewModel.fullName
         nameLable.textColor = .black
         nameLable.textAlignment = .center
         nameLable.font = nameLable.font.withSize(25)
         nameLable.adjustsFontSizeToFitWidth = true
         return nameLable
     }()
-    
-//    lazy var nameView: UIView = {
-//        let nameView = UIView()
-//        nameView.addSubview(firstNameLable)
-//        nameView.addSubview(lastNameLable)
-//        nameView.addSubview(nameLable)
-//
-//        firstNameLable.autoPinEdge(toSuperviewEdge: .left)
-//        firstNameLable.autoPinEdge(toSuperviewEdge: .top)
-//
-//        lastNameLable.autoPinEdge(toSuperviewEdge: .right)
-//        lastNameLable.autoPinEdge(toSuperviewEdge: .top)
-//        return nameView
-//    }()
     
     lazy var headView: UIView = {
         let headView = UIView()
@@ -69,7 +57,7 @@ class BioViewController: UIViewController {
     lazy var bioTextLable: UILabel = {
         let bioTextLable = UILabel()
         bioTextLable.numberOfLines = 0
-        bioTextLable.text = "Bio text placeholder"
+        bioTextLable.text = viewModel.bio
         return bioTextLable
     }()
     
