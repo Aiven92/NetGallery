@@ -21,6 +21,7 @@ class NetworkImagesCollectionViewController: UICollectionViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Flickr"
         
         viewModel = NetworkImageCollectionViewViewModel()
         
