@@ -84,7 +84,7 @@ class BioViewModel {
         var fullName = bioData.firstName
         
         if !bioData.lastName.isEmpty {
-            fullName += bioData.lastName
+            fullName += " " + bioData.lastName
         }
         
         return fullName
