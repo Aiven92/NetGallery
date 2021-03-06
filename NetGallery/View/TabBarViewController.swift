@@ -13,7 +13,7 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         let layout = UICollectionViewFlowLayout()
-        let cvc = NetworkImageCollectionViewController(collectionViewLayout: layout)
+        let cvc = NetworkImagesCollectionViewController(collectionViewLayout: layout)
 
         let firstViewController = UINavigationController(rootViewController: cvc)
         firstViewController.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.search, tag: 0)
