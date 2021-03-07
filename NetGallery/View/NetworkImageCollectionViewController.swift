@@ -13,6 +13,15 @@ private let reuseIdentifier = "Cell"
 class NetworkImagesCollectionViewController: UICollectionViewController {
     var viewModel: CollectionViewViewModelType!
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    private func setupSearchBar() {
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        definesPresentationContext = true
+    }
+    
     private func updateViewForSearchRequest(for request: String) {
         viewModel.searchRequest(for: request, completion: {
             DispatchQueue.main.async { self.collectionView.reloadData()}
@@ -23,6 +32,7 @@ class NetworkImagesCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Flickr"
         
+        setupSearchBar()
         viewModel = NetworkImageCollectionViewViewModel()
         
         updateViewForSearchRequest(for: "Electrolux")
@@ -78,5 +88,13 @@ extension NetworkImagesCollectionViewController: UICollectionViewDelegateFlowLay
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 8
+    }
+}
+
+extension NetworkImagesCollectionViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text, !text.isEmpty else { return }
+
+        self.updateViewForSearchRequest(for: text)
     }
 }
