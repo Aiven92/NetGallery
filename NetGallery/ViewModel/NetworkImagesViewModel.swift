@@ -37,8 +37,12 @@ extension NetworkImageCollectionViewViewModel: CollectionViewViewModelType {
     }
     
     func cellViewModel(forIndexPath indexPath: IndexPath) -> CollectionViewCellViewModelType {
-        print("request for cell \(indexPath.row) of \(NetworkImages.count)")
         let networkImage = NetworkImages[indexPath.row]
         return NetworkImageCellViewModel(photo: networkImage)
+    }
+    
+    func detailViewModel(forIndexPath indexPath: IndexPath) -> DetailViewViewModelType {
+        let networkImage = NetworkImages[indexPath.row]
+        return NetworkImageDetailViewModel(photo: networkImage)
     }
 }

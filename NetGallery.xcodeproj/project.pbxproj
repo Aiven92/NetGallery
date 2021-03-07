@@ -23,6 +23,9 @@
 		22DBA71325F6BA0E002D21B3 /* NetworkImageServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBA71225F6BA0E002D21B3 /* NetworkImageServiceType.swift */; };
 		22DBA71725F6BA23002D21B3 /* CollectionViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBA71625F6BA23002D21B3 /* CollectionViewViewModelType.swift */; };
 		22DBA71A25F6BA47002D21B3 /* CollectionViewCellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBA71925F6BA47002D21B3 /* CollectionViewCellModelType.swift */; };
+		22DBA71E25F6C8C3002D21B3 /* NetworkImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBA71D25F6C8C3002D21B3 /* NetworkImageDetailViewController.swift */; };
+		22DBA72225F6C8F6002D21B3 /* NetworkImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBA72125F6C8F6002D21B3 /* NetworkImageDetailViewModel.swift */; };
+		22DBA72625F6C917002D21B3 /* DetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBA72525F6C917002D21B3 /* DetailViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		22DBA71225F6BA0E002D21B3 /* NetworkImageServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageServiceType.swift; sourceTree = "<group>"; };
 		22DBA71625F6BA23002D21B3 /* CollectionViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewViewModelType.swift; sourceTree = "<group>"; };
 		22DBA71925F6BA47002D21B3 /* CollectionViewCellModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellModelType.swift; sourceTree = "<group>"; };
+		22DBA71D25F6C8C3002D21B3 /* NetworkImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageDetailViewController.swift; sourceTree = "<group>"; };
+		22DBA72125F6C8F6002D21B3 /* NetworkImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageDetailViewModel.swift; sourceTree = "<group>"; };
+		22DBA72525F6C917002D21B3 /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
 		5FF669E8A711D33E1518DDFB /* Pods-NetGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGallery.debug.xcconfig"; path = "Target Support Files/Pods-NetGallery/Pods-NetGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		621637196C95B7CC477F6D23 /* Pods_NetGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		989140FF77DD57891871BCCB /* Pods-NetGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGallery.release.xcconfig"; path = "Target Support Files/Pods-NetGallery/Pods-NetGallery.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 				22DBA6EF25F6A989002D21B3 /* TabBarViewController.swift */,
 				22DBA6F225F6AC02002D21B3 /* NetworkImageCollectionViewController.swift */,
 				22DBA70F25F6B9C7002D21B3 /* NetworkImageCell.swift */,
+				22DBA71D25F6C8C3002D21B3 /* NetworkImageDetailViewController.swift */,
 				22DBA6CE25F6961A002D21B3 /* BioViewController.swift */,
 			);
 			path = View;
@@ -109,6 +116,7 @@
 			children = (
 				22DBA70725F6B8C6002D21B3 /* NetworkImagesViewModel.swift */,
 				22DBA70C25F6B988002D21B3 /* NetworkImageCellViewModel.swift */,
+				22DBA72125F6C8F6002D21B3 /* NetworkImageDetailViewModel.swift */,
 				22DBA6FB25F6AF6C002D21B3 /* BioViewModel.swift */,
 			);
 			path = ViewModel;
@@ -137,6 +145,7 @@
 				22DBA71225F6BA0E002D21B3 /* NetworkImageServiceType.swift */,
 				22DBA71625F6BA23002D21B3 /* CollectionViewViewModelType.swift */,
 				22DBA71925F6BA47002D21B3 /* CollectionViewCellModelType.swift */,
+				22DBA72525F6C917002D21B3 /* DetailViewModelType.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -272,11 +281,14 @@
 			files = (
 				22DBA71325F6BA0E002D21B3 /* NetworkImageServiceType.swift in Sources */,
 				22DBA6F925F6AF38002D21B3 /* Bio.swift in Sources */,
+				22DBA71E25F6C8C3002D21B3 /* NetworkImageDetailViewController.swift in Sources */,
 				22DBA71725F6BA23002D21B3 /* CollectionViewViewModelType.swift in Sources */,
 				22DBA70425F6B7F3002D21B3 /* FlickrPhoto.swift in Sources */,
 				22DBA6FC25F6AF6C002D21B3 /* BioViewModel.swift in Sources */,
+				22DBA72625F6C917002D21B3 /* DetailViewModelType.swift in Sources */,
 				22DBA71025F6B9C7002D21B3 /* NetworkImageCell.swift in Sources */,
 				22DBA70D25F6B988002D21B3 /* NetworkImageCellViewModel.swift in Sources */,
+				22DBA72225F6C8F6002D21B3 /* NetworkImageDetailViewModel.swift in Sources */,
 				22DBA6CF25F6961A002D21B3 /* BioViewController.swift in Sources */,
 				22DBA6F325F6AC02002D21B3 /* NetworkImageCollectionViewController.swift in Sources */,
 				22DBA6F025F6A989002D21B3 /* TabBarViewController.swift in Sources */,
