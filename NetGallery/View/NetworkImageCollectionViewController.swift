@@ -11,6 +11,7 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class NetworkImagesCollectionViewController: UICollectionViewController {
+    private var timer: Timer?
     var viewModel: CollectionViewViewModelType!
     
     let searchController = UISearchController(searchResultsController: nil)
@@ -95,6 +96,10 @@ extension NetworkImagesCollectionViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text, !text.isEmpty else { return }
 
-        self.updateViewForSearchRequest(for: text)
+        // Start search request only after small delay after last input symbol
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
+            self.updateViewForSearchRequest(for: text)
+        })
     }
 }
