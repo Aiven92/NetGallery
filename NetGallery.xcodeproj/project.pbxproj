@@ -49,6 +49,7 @@
 		22DBA71D25F6C8C3002D21B3 /* NetworkImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageDetailViewController.swift; sourceTree = "<group>"; };
 		22DBA72125F6C8F6002D21B3 /* NetworkImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageDetailViewModel.swift; sourceTree = "<group>"; };
 		22DBA72525F6C917002D21B3 /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
+		22DBA73325F6E572002D21B3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5FF669E8A711D33E1518DDFB /* Pods-NetGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGallery.debug.xcconfig"; path = "Target Support Files/Pods-NetGallery/Pods-NetGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		621637196C95B7CC477F6D23 /* Pods_NetGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		989140FF77DD57891871BCCB /* Pods-NetGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetGallery.release.xcconfig"; path = "Target Support Files/Pods-NetGallery/Pods-NetGallery.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		22DBA6BE25F6961A002D21B3 = {
 			isa = PBXGroup;
 			children = (
+				22DBA73325F6E572002D21B3 /* README.md */,
 				22DBA6C925F6961A002D21B3 /* NetGallery */,
 				22DBA6C825F6961A002D21B3 /* Products */,
 				24E775935E483E286289ACA2 /* Pods */,
