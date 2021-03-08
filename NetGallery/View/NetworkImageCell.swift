@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class NetworkImageCell: UICollectionViewCell {
     weak var viewModel: CollectionViewCellViewModelType? {
@@ -15,15 +16,19 @@ class NetworkImageCell: UICollectionViewCell {
                   let url = viewModel.getURL()
             else { return }
             
-            DispatchQueue.global().async { [weak self] in
-                if let data = try? Data(contentsOf: url) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self?.image.image = image
-                        }
-                    }
-                }
-            }
+            // First implementation: async image view. Without caching
+//            DispatchQueue.global().async { [weak self] in
+//                if let data = try? Data(contentsOf: url) {
+//                    if let image = UIImage(data: data) {
+//                        DispatchQueue.main.async {
+//                            self?.image.image = image
+//                        }
+//                    }
+//                }
+//            }
+            
+            // Second varian: SDWebImage async + caching
+            self.image.sd_setImage(with: url, completed: {_,_,_,_ in })
         }
     }
     
@@ -32,6 +37,7 @@ class NetworkImageCell: UICollectionViewCell {
         image.contentMode = .scaleAspectFill
         image.clipsToBounds = true // Cutoff
         image.layer.cornerRadius = 12
+        image.sd_imageIndicator = SDWebImageActivityIndicator.gray
         return image
     }()
     

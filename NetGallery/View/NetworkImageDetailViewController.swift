@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class NetworkImageDetailViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class NetworkImageDetailViewController: UIViewController {
     
     private var image: UIImageView = {
         let image = UIImageView()
+        image.sd_imageIndicator = SDWebImageActivityIndicator.gray
         return image
     }()
 
@@ -34,19 +36,27 @@ class NetworkImageDetailViewController: UIViewController {
         
         guard let url = viewModel.getURL() else { return }
         
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        guard let selfImage = self?.image else { return }
-                        selfImage.image = image
-                        let imageSize = image.size
-                        selfImage.autoMatch(.height, to: .width, of: selfImage,
-                                             withMultiplier: imageSize.height/imageSize.width)
-                    }
-                }
-            }
-        }
+//        DispatchQueue.global().async { [weak self] in
+//            if let data = try? Data(contentsOf: url) {
+//                if let image = UIImage(data: data) {
+//                    DispatchQueue.main.async {
+//                        guard let selfImage = self?.image else { return }
+//                        selfImage.image = image
+//                        let imageSize = image.size
+//                        selfImage.autoMatch(.height, to: .width, of: selfImage,
+//                                             withMultiplier: imageSize.height/imageSize.width)
+//                    }
+//                }
+//            }
+//        }
+        
+        self.image.sd_setImage(with: url, completed: {image,_,cache,_ in
+            // Ugly trick to atoscale image.
+            // Warning!!! There is issue with big height of image!
+            guard let imageSize = image?.size else { return }
+            self.image.autoMatch(.height, to: .width, of: self.image,
+                                 withMultiplier: imageSize.height/imageSize.width)
+        })
     }
     
     required init?(coder: NSCoder) {

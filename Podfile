@@ -7,4 +7,6 @@ target 'NetGallery' do
 
   # Pods for NetGallery
   pod "PureLayout"
+  pod "SDWebImage"
+  
 end
