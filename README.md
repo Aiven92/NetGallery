@@ -3,7 +3,7 @@
 ## Simple two tabs demo project:
 - iOS11, Swift4.2, MVVM, PureLayout
 - Put api key from https://www.flickr.com/services/api/explore/flickr.photos.search to Service/Flickr.swift
-- 
+
 ### Firs tab:
 - Two collumn collection view. Each cell represented with image, fetched from Flickr.com with REST API.
 - At launch search starts with predefined search request. User can type own one.

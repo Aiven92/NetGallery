@@ -8,7 +8,7 @@
 import Foundation
 
 // Take apiKey from the boottom of https://www.flickr.com/services/api/explore/flickr.photos.search
-private let apiKey = "1a37290cec0a7bed4c16be549004b5a2"
+private let apiKey = "58243659e4eb7b45a48e9c839cbc4ea0"
 private let elementsMaxNumber = 20
 
 class Flickr: NetworkImageServiceType {
